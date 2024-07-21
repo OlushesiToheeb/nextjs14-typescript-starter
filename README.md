@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Next.js 14 TypeScript Starter
+
+Welcome to the Next.js 14 TypeScript Starter project! This repository is a boilerplate for Next.js 14 applications using TypeScript, integrating several advanced features and tools to kickstart your development.
+
+## Features
+
+This starter kit includes the following technologies:
+
+- **Next.js 14** with the App Router
+- **TypeScript**: Static type checking
+- **Redux & Redux-Persist**: State management and persistence
+- **Tailwind CSS**: Utility-first CSS framework
+- **Sass**: CSS pre-processing
+- **Docker**: Application containerization
+- **Jest**: Unit testing
+- **Playwright**: End-to-end testing
+- **React Hook Form**: Efficient form management
+- **ESLint & Prettier**: Code linting and formatting
+- **Yup**: Schema validation for forms
+- **lint-staged**: Running linters on git staged files
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Ensure you have Node.js version 14.x or higher installed. Docker is optional but recommended for containerization.
+
+### Installation
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+
+    ```bash
+    git clone https://github.com/OlushesiToheeb/nextjs14-typescript-starter.git
+    cd nextjs14-typescript-starter
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    npm install
+    ```
+
+### Running the App
+
+To run the application in development or production environments, use the following commands:
+
+1. **Development mode:**
+
+    ```bash
+    npm run dev
+    ```
+
+2. **Production mode:**
+
+    Build and start the application:
+
+    ```bash
+    npm run build
+    npm start
+    ```
+
+### Docker Usage
+
+To build and run the application using Docker, execute:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+docker build -t nextjs14-typescript-starter .
+docker run -p 3000:3000 nextjs14-typescript-starter
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Testing
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Run unit and end-to-end tests using:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+1. **Unit tests with Jest:**
 
-## Learn More
+    ```bash
+    npm run test
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **End-to-end tests with Playwright:**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    npm run test:e2e
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Linting and Formatting
 
-## Deploy on Vercel
+Ensure your code meets the coding standards with:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Linting:**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    ```bash
+    npm run lint
+    ```
+
+2. **Formatting:**
+
+    ```bash
+    npm run format
+    ```
+
+### Husky and lint-staged
+
+Husky and lint-staged are configured to run linters on git staged files to ensure code quality before commits.
+
+## Contributing
+
+Contributions to improve the starter kit are highly welcomed. Please feel free to fork the repository, make your changes, and submit a pull request.
